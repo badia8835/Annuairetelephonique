@@ -1,0 +1,24 @@
+CREATE DATABASE blog;
+
+CREATE TABLE annuaires ( id INT(6) AUTO_INCREMENT PRIMARY KEY,
+nom VARCHAR(191) NOT NULL, 
+prenom VARCHAR(191) NOT NULL, 
+telephone VARCHAR(20) NOT NULL, 
+adresse VARCHAR(250) NOT NULL, 
+ville VARCHAR(191) NOT NULL, 
+province VARCHAR(191) NOT NULL );
+
+INSERT INTO annuaires (nom, prenom, telephone, adresse, ville, province) VALUES ('Doe', 'John', '43569696958', '123 Main St', 'Anytown', 'Province');
+INSERT INTO annuaires (nom, prenom, telephone, adresse, ville, province) VALUES ('Philipe', 'Mourin', '4356966668', '154 rue bernier', 'Montreal', 'Quebec');
+
+
+
+CREATE TABLE login (
+  user_id INT PRIMARY KEY,
+  username VARCHAR(50) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  last_login TIMESTAMP
+);
+
+INSERT INTO login (user_id, username, password, last_login)
+VALUES (1, 'root', 'root', NULL);
